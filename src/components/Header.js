@@ -6,7 +6,7 @@ import Input from '@material-ui/core/Input';
 function Header() {
   return (
       <div className="header">
-        <img className='header__logo' src='https://www.mrliving.com.tw/media/logo/stores/1/logo_3_1_.png'/>
+        <img className='header__logo' title='MR.LIVING' alt='MR.LIVING' src='https://www.mrliving.com.tw/media/logo/stores/1/logo_3_1_.png'/>
         <div className="header__search">     
             <input type="text" placeholder="皮沙發、布沙發" className='header__searchInput'/>
             <SearchIcon className='header__searchIcon'/>
