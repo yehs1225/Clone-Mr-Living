@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.annoucement{
+    background-color: #FFE9E9;
+    color: #80191a;
+    text-align: center;
+    margin: 0 auto;/*put item center*/
+    /* width: 1240px; */
+    /* height: 146px; */
+    padding: 3vh 0;
+}
+ul{
+    line-height: 24px;
+}
+.item{
+    font-size: 14.5px;
+}
+.title{
+    font-size: 20px;
+}
