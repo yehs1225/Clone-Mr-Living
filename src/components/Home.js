@@ -8,7 +8,7 @@ import Top from './Top'
 function Home() {
   return <div className='home'>
       <div className="home__section">
-        {/* <Top/> */}
+        <Top/>
       </div>
       <div className="home__section">
         <Anouncement/>
