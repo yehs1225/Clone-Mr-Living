@@ -6,7 +6,8 @@ function Seperator({height}) {
         <Box height={height}/>
         <hr
             style={{
-                color:`lightgray`
+                color:`#cecece`,
+                opacity:`0.5`
             }}
         />
         <Box height={height}/>
