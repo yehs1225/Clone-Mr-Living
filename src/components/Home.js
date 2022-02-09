@@ -1,13 +1,16 @@
 import React from 'react';
 import './Home.css'
 import Anouncement from './Announcement';
+import Seperator from './Seperator';
 import Ad from './Ad';
+import Productlist from './Productlist';
 function Home() {
   return <div className='home'>
       <div className="home__section">
         <Anouncement/>
+        <Seperator height='23px'/>
       </div>
-
+          
       <div className="home__section">
         <Ad
         image='https://www.mrliving.com.tw/media/wysiwyg/MCM-hotsales-box-W_1.jpg'
@@ -19,6 +22,7 @@ function Home() {
         bgColor="#e8e7e5"
         btnColor="#333333"
         />
+        <Seperator height='23px'/>
       </div>
       <div className="home__section">
         <Ad
@@ -31,6 +35,7 @@ function Home() {
         bgColor="#e8e7e5"
         btnColor="#333333"
         />
+      <Seperator height='23px'/>
       </div>
       <div className="home__section">
         <Ad
@@ -43,6 +48,7 @@ function Home() {
         bgColor="#c2c1bd"
         btnColor="#953d33"
         />
+      <Seperator height='23px'/>
       </div>
       <div className="home__section">
         <Ad
@@ -56,7 +62,19 @@ function Home() {
         bgColor="#ffffff"
         btnColor="#333333"
         /> 
+      <Seperator height='23px'/>
       </div>
+      <div className="home__section">
+        <p>你可能會喜歡</p>
+        <Productlist/>
+        <Seperator height='23px'/>
+      </div>
+      <div className="home__section">
+          <p>暢銷熱賣區</p>
+        <Productlist/>
+      </div>
+      
+      
   </div>;
 }
 

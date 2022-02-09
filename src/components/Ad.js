@@ -37,7 +37,7 @@ const Container = styled.div`
     height:350px;
     align-items: center;
     text-align:center;
-    margin: 30px auto;/*put item center*/
+    margin: 0px auto;/*put item center*/
     .title{
         font-size:24px;
         padding-bottom:5px;
@@ -49,8 +49,7 @@ const Image = styled.div`
 img {
     width: auto;
     height: 350px;
-    object-fit: fill;
-    
+    object-fit: cover;
   }
   position:initial;
   z-index:-1;

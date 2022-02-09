@@ -1,5 +1,6 @@
 .home__section{
-    margin:20px auto;
+    margin:0 auto;
+    /* margin-bottom: 40px; */
     max-width: 1280px;
     width:1280px;
     flex:auto;
@@ -7,3 +8,8 @@
     overflow-x: hidden;
 }
 
+.home__section > p{
+    text-align: center;
+    font-size: 24px;
+    color:#333;
+}
