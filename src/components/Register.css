@@ -1,0 +1,20 @@
+.register{
+    width: 394px;
+    height: 500px;
+    display: flex;
+}
+
+input{
+    display: block;
+    margin-bottom: 10px;
+    width: 354px;
+    height: 40px;
+    
+}
+button{
+    width: 354px;
+    height: 40px;
+    background-color: #e6dbc3;
+    box-shadow: 0px 0px 2px 2px #bbbb;
+    margin-top: 10px;
+}

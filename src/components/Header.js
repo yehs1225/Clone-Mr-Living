@@ -3,8 +3,12 @@ import './Header.css'
 import {Link } from "react-router-dom";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import Input from '@material-ui/core/Input';
+import {useStateValue} from './../StateProvider'
+import {auth} from "./../firebase"
+import {signOut } from "firebase/auth";
+
 function Header() {
+
   return (
       <div className="header">
         <Link to="/">
@@ -17,7 +21,7 @@ function Header() {
         <div className="header__nav">
             <div  className="header__link">
                 <a>歡迎!</a>
-                <a>登入</a>
+                <Link to="/HandleAccount"><a>登入</a></Link>
                 <a>或者</a>
                 <a>註冊</a>
             </div>

@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Copyright from './components/Copyright';
 import Cart from './components/Cart';
+import HandleAccount from './components/HandleAccount';
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
           {/* Homepage */}
           <Route path="/Cart" element={<><Header/><Navbar/><Cart/></>}/>
           {/* Homepage */}
+          <Route path="/HandleAccount" element={<HandleAccount/>}/>
           <Route path="/" element={<><Header/><Navbar/><Home/><Footer/><Copyright/></>}/>
         </Routes>
       </div>
