@@ -8,22 +8,25 @@ function Top() {
   return (
   <div className="top">
     <div className='top__left'>
-        <div className="top__menu">
-            <h3 className="menu__title ">熱門點擊</h3>
-                <div className="hot-hit menu">
-                    <a className="menu__option" href="#">即將調漲家具專區</a>
-                    <a className="menu__option" href="#">床墊/枕頭/寢具推薦</a>
-                    <a className="menu__option" href="#">北歐復古風家具</a>
-                    <a className="menu__option" href="#">防潑水防貓抓布沙發</a>
-                    <a className="menu__option" href="#">透氣親膚全牛皮沙發</a>
-                    <a className="menu__option" href="#">預約體驗全台門市</a>
+        <div className="top__menu  menu">
+            <h2 className="menu__title ">熱門點擊</h2>
+                <div className="hot-hit">
+                  <ul className="hot-hit-list">
+                    <li><b><a className="menu__option hot" href="#">即將調漲家具專區</a></b></li>
+                    <li><b><a className="menu__option" href="#">床墊/枕頭/寢具推薦</a></b></li>
+                    <li><b><a className="menu__option" href="#">北歐復古風家具</a></b></li>
+                    <li><b><a className="menu__option" href="#">防潑水防貓抓布沙發</a></b></li>
+                    <li><b><a className="menu__option" href="#">透氣親膚全牛皮沙發</a></b></li>
+                    <li><b><a className="menu__option" href="#">預約體驗全台門市</a></b></li>
+                  </ul>
                 </div>
         </div> 
-        <div className="down__menu">
-            
+        <div className="down__menu menu">   
             <h3 className="menu__title">了解更多</h3>
-                <div className="know-more menu">
-                    <a  className="menu__option" href="#">居家先生部落格</a>
+                <div className="know-more">
+                  <ul className="hot-hit-list">
+                    <li><b><a  className="menu__option" href="#">居家先生部落格</a></b></li>
+                  </ul>
                 </div>
         </div>
         </div>

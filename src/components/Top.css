@@ -11,38 +11,56 @@ img{
 .top__left{
     flex: 0.2;
     width: 200px;
-    padding-right:10px ;
 }
 .top__slide{
-    flex: 0.78;
+    flex: 0.8;
     width:930px;
     height: 520px;
-    
+    padding-left: 30px;
 }
 .top__menu{
-    border:1px solid #f5f5f5;
-    border-radius: 30px;
-    padding-bottom: 10px;;
+     /* #f5f5f5; */
+    
+    margin-bottom: 15px;
 }
 
 .menu{
     display: flex;
     flex-direction: column;
+    border:1px solid #ddd;
+    border-radius: 7px;
+    overflow: hidden;
+    width: 290px;
 }
 .menu__title{
     font-weight: bold;
     font-size: 16px;
-    background-color:#dfdede ;
-    padding:10px 0;
-    padding-left: 10px;
+    background-color:#f5f5f5 ;
+    padding: 13px 13px 12px;
     margin: 0;
 }
 .menu__option{
-    color:#046db5;
-    padding:10px 0;
-    border-top: 1px solid #dbdada;
-    padding-left: 10px;
+    color:#006bb4;
     text-decoration: none;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 550;
+    display: block;
+    margin:0 20px;
+    border-bottom:1px solid #ddd
+}
+
+.hot{
+    color: #8f0b19;
+    font-weight: bold;
+}
+.hot:hover{
+    color: #8f0b19;
+}
+.menu__option:hover{
+    text-decoration:underline;
+    color:#006bb4;
+}
+.hot-hit > li{
+    border-bottom: 1px solid #ddd;
+    background-color: black;
 }

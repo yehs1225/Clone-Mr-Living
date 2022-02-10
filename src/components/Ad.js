@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import {ReactComponent as ArrowIcon} from './../images/arrow.svg';
-function Ad({bgColor,btnColor,image1,image2,type1,text1,type2,text2,type3,text3,type4,text4,btn}) {
+function Ad({bgColor,btnColor,image1,image2,type1,text1,type2,text2,type3,text3,type4,text4,btn,link}) {
   return (
       <>
         <Container bgColor={bgColor}>
@@ -19,10 +19,12 @@ function Ad({bgColor,btnColor,image1,image2,type1,text1,type2,text2,type3,text3,
                         <div className={type3}>{text3}</div>
                         <div className={type4}>{text4}</div>
                     </LineTwo>  
-                    <Button btnColor={btnColor}>
-                        <div></div>
-                        <div>{btn}</div>
-                    </Button>
+                    <Link to={link} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                        <Button btnColor={btnColor} >
+                            <div>{btn}</div>
+                        </Button>                   
+                    </Link>
+
                 </div>
             </MobileDisappear>      
         </Container>            

@@ -1,14 +1,10 @@
-*{
-    list-style: none;
-    margin: 0; padding: 0;
-    font-size: 12px;
-    
-  }
 .footer{
     display: flex;
     justify-content: space-evenly;
     background-color: #121214;
     color: white;
+    margin: 0; padding: 0;
+    /* font-size: 12px; */
 }
 .links{
     color: white;
@@ -31,10 +27,14 @@ a{
     height:30px;
     padding-right: 7px;
 }
-li {
+.footer__section>li {
     display: block;
     padding-bottom: 15px;
+    
 }
 .footer_subtitle{
     font-weight: 400px;
+}
+ul{
+    padding: 0;
 }

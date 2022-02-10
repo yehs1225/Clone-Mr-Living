@@ -1,15 +1,15 @@
-.navbar{
-    background-color: rgb(240, 240, 240);
-    padding: 10px 200px;
-    text-decoration: none;
-}
 .navbar__container{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    background-color:rgb(240, 240, 240);
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.navbar__container > a{
+.navbar__text{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar__text > a{
     text-decoration: none;
     color:#575c6d;
     font-weight: bolder;

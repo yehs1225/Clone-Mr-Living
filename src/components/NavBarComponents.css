@@ -1,19 +1,49 @@
-.navbar__item{
+.navbarcomponent{
+    /* margin: 0; */
+}
+
+.navbarcomponent__container{
     position: absolute;
-    top: 100px;
-    width: 600px;
-    transform: translateX(-45%);
-    background-color: var(--bg);
-    border: var(--border);
-    border-radius: var(--border-radius);
+    top: 115px;
+    width: 1410px;
     padding: 1rem;
     overflow: hidden;
-    transition: height var(--speed) ease;
     text-align: center;
-    background-color: lightgray;
+    background-color: white;
+    z-index: 10;
+
 }
-.container > a{
+.navbarcomponent > a{
     text-decoration: none;
     color:#575c6d;
     font-weight: bolder;
+}
+.navbarcomponent__title{
+    /* display: flex; */
+    font-size: 16px;
+    padding: 10px 45px;  
+    margin: 0;
+}
+.navbarcomponent:hover{
+    background-color: white;
+    
+}
+.navbarcomponent > a:hover{
+    color:#046db5;
+}
+.container__items > a{
+    height: 10px;
+    font-size: inherit;
+    color:#575c6d;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.container__items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 30px;
+    grid-column-start: auto;
+}
+.container__items > a:hover{
+    color:#ff5501;
 }
