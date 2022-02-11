@@ -1,0 +1,25 @@
+.cartproduct{
+    /* width: 1300px; */
+    display: flex;
+    align-content: center;
+}
+.cartproduct>.image{
+    width: 20%;
+    height: auto;
+}
+.cartproduct>.title{
+    width: 35%;
+}
+.cartproduct>.price{
+    width: 15%;
+}
+.cartproduct>.number{
+    width: 15%;
+}
+.cartproduct>.number>input{
+    width: 60px;
+    text-align: center;
+}
+.cartproduct>.total{
+    width: 15%;
+}

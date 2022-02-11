@@ -3,7 +3,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import CurrencyFormat from 'react-currency-format';
 import './Product.css'
-function Product({image,title,price}) {
+function Product({image,title,price,id}) {
   return (
       <div className="product">
           <div className="product__image">
