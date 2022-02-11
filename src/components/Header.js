@@ -5,13 +5,39 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import {useStateValue} from './../StateProvider'
-import {auth} from "./../firebase"
+import {auth,db} from "./../firebase"
 import {signOut } from "firebase/auth";
+// Create a reference to the collections and use get to retrieve the results
+import { collection, query, where , getDocs} from "firebase/firestore";
+
+
 function Header() {
   const [{basket,user},dispatch]=useStateValue();
   const [dropdown,setDropdown] = useState(false);
+  const [userName,SetUserName]=useState('');
   const handleClick = ()=>{
     setDropdown(!dropdown);
+  }
+  // if(user){getUserName()};
+  useEffect(()=>{
+    getUserName();},
+    []
+  )
+  const getUserName = async() =>{
+    //query user who's email === use.email
+    const result=[];
+    const userRef = collection(db,"SignedUpUserData");
+    const q = query(userRef,where("Email","==",user.email));
+    const querySnapshot = await getDocs(q);
+    console.log(querySnapshot);
+    querySnapshot.forEach((doc)=>{
+      console.log(doc.id," >>> ",doc.data());
+      const userData = doc.data();
+      result.push(userData.LastName);
+      result.push(userData.FirstName);
+      SetUserName(result[0]+result[1]);
+    })
+    
   }
   const handleAuthentication = ()=>{
       if(user){
@@ -22,6 +48,7 @@ function Header() {
             });
       }
   }
+  
   return (
     <>
       <div className="header">
@@ -36,8 +63,7 @@ function Header() {
             <div className="header__link">    
                 {user?
                 <div>
-                  <span>歡迎您，{user.email}</span>
-                  <div className="dropdown"><KeyboardArrowDownIcon onClick={handleClick}/>
+                  <div className="dropdown"><div className='flex'><span>歡迎您，{userName}</span><KeyboardArrowDownIcon onClick={handleClick}/></div>
                   {(dropdown)&&(
                     <ul>
                       <li>我的帳戶</li>

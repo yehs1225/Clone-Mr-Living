@@ -12,7 +12,6 @@ import Cart from './components/Cart';
 import HandleAccount from './components/HandleAccount';
 function App() {
   const [{},dispatch]=useStateValue();
-  //will only run once when the app component is loads,(since [] is unchanged)
   useEffect(()=>{
     //will only run once when the app component is loads,(since [] is unchanged)
     onAuthStateChanged(auth, (user) => {
