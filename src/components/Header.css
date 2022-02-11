@@ -16,6 +16,10 @@
 .header__nav{
     display: flex;
 }
+.header__nav__drop{
+    display: flex;
+    margin-top: 148px;
+}
 .header__search{
     display: flex;
     align-items: center;
@@ -36,12 +40,15 @@
 }
 .header__link > div{
     display:flex;
-    padding:0 20px;
+    /* padding:0 20px; */
     font-size: 16px;
 }
 .header__link > div > div{
-    padding:0 20px;
+    
     font-size: 16px;
+}
+.header__nav__guest > div{
+    padding:0 20px;
 }
 .header__cart{
     display: flex;
@@ -49,7 +56,6 @@
 }
 .header__cartCount{
     background-color: #ff5501;
-    
     line-height: 24px;
     padding:0 7px;
     text-align: center;
@@ -62,4 +68,26 @@
   }
 .cart-icon{
     color: #949393;
+}
+.cart-icon:hover{
+    color: #585757;
+}
+.login-link:hover,.register-link:hover{
+    /* background-color:white;  */
+    color:white;
+}
+.dropdown{
+    width: 140px;
+    padding: 0;
+    z-index: 10;
+}
+.dropdown > ul{
+    list-style: none;
+    background-color: white;
+}
+.dropdown> ul> li{
+    padding:10px 0 10px 10px;
+}
+.dropdown> ul> li:hover{
+    background-color: #949393;;
 }

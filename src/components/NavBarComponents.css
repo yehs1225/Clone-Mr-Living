@@ -1,17 +1,12 @@
-.navbarcomponent{
-    /* margin: 0; */
-}
-
 .navbarcomponent__container{
     position: absolute;
     top: 115px;
-    width: 1410px;
+    width: 1450px;
     padding: 1rem;
     overflow: hidden;
     text-align: center;
     background-color: white;
     z-index: 10;
-
 }
 .navbarcomponent > a{
     text-decoration: none;
@@ -19,7 +14,6 @@
     font-weight: bolder;
 }
 .navbarcomponent__title{
-    /* display: flex; */
     font-size: 16px;
     padding: 10px 45px;  
     margin: 0;

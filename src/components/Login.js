@@ -24,7 +24,7 @@ const LoginForm = () => {
     <div className="login">
         <form>
             <input 
-              placeholder="  Email/手機號碼" type="text" className="login-box" required
+              placeholder="  Email" type="text" className="login-box" required
               value={email} onChange={e => setEmail(e.target.value)} />
             <input 
               placeholder="  密碼" type="password" className="login-box" required

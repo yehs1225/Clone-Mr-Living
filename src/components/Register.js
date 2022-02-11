@@ -26,10 +26,10 @@ function Register() {
             <input placeholder="  名" type="text" name="username" className="login-box" />
             <input placeholder="  手機號碼，格式09XXXXXXXX" type="text" name="username" className="login-box" />
             <input 
-              placeholder="  Email" type="text" name="username" className="login-box" required
+              placeholder="  Email(*必填)" type="text" name="username" className="login-box" required
               value={email} onChange={e => setEmail(e.target.value)} />
             <input 
-              placeholder="  密碼" type="password" name="password" className="login-box" required
+              placeholder="  密碼(*必填)" type="password" name="password" className="login-box" required
               value={password} onChange={e => setPassword(e.target.value)}/>
             <button type="submit" onClick={signIn} className="register-btn">註冊</button>
              

@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import './NavBarComponents.css';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 function NavBarComponent(props) {
   const[isHover,setIsHover] = useState(false);
   const[isHoverItem,setIsHoverItem] = useState(false);
@@ -27,7 +28,7 @@ function NavBarComponent(props) {
       <div className='navbarcomponent'onMouseEnter={()=>setIsHover(true)}onMouseLeave={()=>setIsHover(false)}>
         <a  href='#' className="navbar__homepage">
           <div className='navbarcomponent__title' >
-            {props.title} 
+            {props.title}{(Title2Item[props.title])&&(isHover?(<KeyboardArrowDownIcon style={{transform:'rotate(180deg)'}}/>):(<KeyboardArrowDownIcon/>))}
           </div> 
         </a>   
       </div>

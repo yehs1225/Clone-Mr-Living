@@ -15,43 +15,57 @@ function HandleAccount() {
         setAction('login');
     }
   return (
-    <Container>
-        <Main>
-            <LeftImage/>
-            <RightForm>
-                <ChangeBtn>
-                    <LoginForm 
-                        onClick={handleChangeLogin} addline={(action==='login')&&('border-bottom: 4px solid #e6dbc3;')}>
-                        <b>密碼登入</b>
-                    </LoginForm>
-                    <RegisterForm 
-                        onClick={handleChange2Register} addline={(action==='register')&&('border-bottom: 4px solid #e6dbc3;')}>
-                        <b>註冊</b>
-                    </RegisterForm>
-                </ChangeBtn>
-                <InputBox>
-                    {(action==='login')&&(<Login/>)}
-                    {(action==='register')&&(<Register/>)}
-                </InputBox>
-            </RightForm>
-            <BottomLine color="#e6dbc3" height={1}/>
-            <BottomLine color="#2e2e2e" height={0}/>
-            {/*  */}
-        </Main>
-        <Link style={{ color: 'inherit', textDecoration: 'inherit'}} to="/">
-            <CloseIcon fontSize="large"/>
-        </Link>
-        
-    </Container>
+    
+        <Container>  
+            <Page>    
+            <Main>
+                <LeftImage/>
+                <RightForm>
+                    <ChangeBtn>
+                        <LoginForm 
+                            onClick={handleChangeLogin} addline={(action==='login')&&('border-bottom: 4px solid #e6dbc3;')}>
+                            <b>密碼登入</b>
+                        </LoginForm>
+                        <RegisterForm 
+                            onClick={handleChange2Register} addline={(action==='register')&&('border-bottom: 4px solid #e6dbc3;')}>
+                            <b>註冊</b>
+                        </RegisterForm>
+                    </ChangeBtn>
+                    <InputBox>
+                        {(action==='login')&&(<Login/>)}
+                        {(action==='register')&&(<Register/>)}
+                    </InputBox>
+                </RightForm>
+                <BottomLine color="#e6dbc3" height={1}/>
+                <BottomLine color="#2e2e2e" height={0}/>
+                {/*  */}
+            </Main>
+            <Link style={{backgroundColor:'gray', color: 'inherit', textDecoration: 'inherit'}} to="/">
+                <Close/>
+            </Link>
+            </Page>  
+        </Container>
   )
 }
 
 export default HandleAccount
+const Page = styled.div`
+    background-color:white;
+    display:flex;
+`
 const Container = styled.div`
     display: flex;
+    background-color:gray;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+`
+const Close = styled(CloseIcon)`
     background-color:white;
 `
-
 const Main = styled.div`
     width: 750px;
     height: 615px;
@@ -72,6 +86,9 @@ const ChangeBtn = styled.div`
     height: 50px;
     display: flex;
     justify-content: space-evenly;
+    :hover{
+        cursor:pointer;
+    }
 `
 const InputBox =styled.div`
     padding:40px 0 0 20px ;
