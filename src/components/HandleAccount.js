@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import CloseIcon from '@material-ui/icons/Close';
 import Login from './Login';
 import Register from './Register';
-import {Link} from 'react-router-dom';
-function HandleAccount(type='login') {
+import {Link,useLocation} from 'react-router-dom';
+function HandleAccount() {
+    const location = useLocation();
+    const {type} = location.state;
     const [action,setAction] = useState(type);
     const handleChange2Register = ()=>{
         setAction('register');
@@ -15,13 +17,17 @@ function HandleAccount(type='login') {
   return (
     <Container>
         <Main>
-            <LeftImage>
-                {/* <img src="https://www.mrliving.com.tw/media/mobilelogin/backimage/default/login-pic.jpeg"/> */}
-            </LeftImage>
+            <LeftImage/>
             <RightForm>
                 <ChangeBtn>
-                    <LoginForm onClick={handleChangeLogin} addline={(action==='login')&&('border-bottom: 4px solid #e6dbc3;')}><b>密碼登入</b></LoginForm>
-                    <RegisterForm onClick={handleChange2Register}  addline={(action==='register')&&('border-bottom: 4px solid #e6dbc3;')}><b>註冊</b></RegisterForm>
+                    <LoginForm 
+                        onClick={handleChangeLogin} addline={(action==='login')&&('border-bottom: 4px solid #e6dbc3;')}>
+                        <b>密碼登入</b>
+                    </LoginForm>
+                    <RegisterForm 
+                        onClick={handleChange2Register} addline={(action==='register')&&('border-bottom: 4px solid #e6dbc3;')}>
+                        <b>註冊</b>
+                    </RegisterForm>
                 </ChangeBtn>
                 <InputBox>
                     {(action==='login')&&(<Login/>)}

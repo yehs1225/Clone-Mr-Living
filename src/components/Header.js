@@ -8,7 +8,16 @@ import {auth} from "./../firebase"
 import {signOut } from "firebase/auth";
 
 function Header() {
-
+  const [{basket,user},dispatch]=useStateValue();
+  const handleAuthentication = ()=>{
+      if(user){
+          signOut(auth).then(() => {
+              // Sign-out successful.
+            }).catch((error) => {
+              // An error happened.
+            });
+      }
+  }
   return (
       <div className="header">
         <Link to="/">
@@ -19,11 +28,14 @@ function Header() {
             <SearchIcon className='header__searchIcon'/>
         </div>
         <div className="header__nav">
-            <div  className="header__link">
-                <a>歡迎!</a>
-                <Link to="/HandleAccount"><a>登入</a></Link>
-                <a>或者</a>
-                <a>註冊</a>
+            <div  onClick={handleAuthentication} className="header__link">    
+                {user?<div>歡迎您， {user.email}</div>:
+                  (<div>
+                    <div>歡迎</div>
+                    <Link to="/HandleAccount" state={{ type: "login" }}><div>登入</div></Link>
+                        <div>或者</div>
+                    <Link to="/HandleAccount" state={{ type: "login" }}><div>註冊</div></Link>
+                  </div>)}
             </div>
             <Link style={{ color: 'inherit', textDecoration: 'inherit'}}to="/Cart">
               <div  className="header__cart">

@@ -11,7 +11,7 @@ input{
     height: 40px;
     height: auto;
 }
-button{
+.sign-btn{
     width: 354px;
     height: 40px;
     background-color: #e6dbc3;
