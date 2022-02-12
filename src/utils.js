@@ -13,3 +13,16 @@ export const getUserName = async(user) =>{
     })  
     return (result[0]+result[1]);  
   }
+export const getAllProducts = async()=>{
+  const result=[];
+  const querySnapshot = await getDocs(collection(db, "Products"));
+  querySnapshot.forEach((doc) => {
+    result.push({
+      id:doc.id,
+      title:doc.data()['Title'],
+      price:doc.data()['Price'],
+      imageUrl:doc.data()['ImageUrl']
+    });
+  });
+  return (result);
+}

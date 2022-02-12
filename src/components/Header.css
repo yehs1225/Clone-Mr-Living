@@ -64,6 +64,7 @@
 }
 .header__logo {
     width: 170px;
+    height: auto;
     object-fit: contain;
   }
 .cart-icon{

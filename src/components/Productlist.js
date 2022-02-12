@@ -1,10 +1,27 @@
 import React from 'react';
+import {useStateValue} from './../StateProvider'
 import Product from './Product';
 import './Productlist.css';
 function Productlist() {
+    const [{basket,user,userName,product},dispatch]=useStateValue();
+    // useEffect(()=>{
+    //     getAllProducts().then((product)=>{
+    //         setProductList(product);
+    //         console.log(product);
+    //     })
+    // },[])
   return (
     <div className="productlist">
-        <Product 
+        {product.map((obj,index)=>(
+            <Product 
+            key={index}
+            id={obj.id}
+            imageUrl={obj.imageUrl}
+            title={obj.title}
+            price={obj.price}
+            />
+        ))}
+        {/* <Product 
             id='1'
             image="https://www.mrliving.com.tw/media/catalog/product/cache/912f4218b83600a6f47af6c76f1f9667/c/h/charles_cabinet_tall_v1_1210_p00_1.jpg"
             title="Charles 五斗櫃"
@@ -33,7 +50,7 @@ function Productlist() {
             image="https://www.mrliving.com.tw/media/catalog/product/cache/912f4218b83600a6f47af6c76f1f9667/t/w/twinkle_armchair_weaveivory_v1_0118_p00.jpg"
             title="Twinkle 布單人椅 (Weave Ivory)"
             price={19990}
-            />
+            /> */}
     </div>
   )
 }

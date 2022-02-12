@@ -4,22 +4,25 @@
     align-content: center;
 }
 .cartproduct>.image{
-    width: 20%;
+    width: 25%;
     height: auto;
 }
 .cartproduct>.title{
     width: 35%;
 }
 .cartproduct>.price{
-    width: 15%;
+    width:15%;
 }
 .cartproduct>.number{
-    width: 15%;
+    width: 10%;
 }
 .cartproduct>.number>input{
     width: 60px;
     text-align: center;
 }
 .cartproduct>.total{
-    width: 15%;
+    width: 20%;
+}
+.cartproduct>.delete{
+    width: 5%;
 }

@@ -70,10 +70,10 @@ function Cart() {
 
       <div className="cart__basket">
         <div className="basket__header">
-          <span><b>產品</b></span>
-          <span><b>價格</b></span>
-          <span><b>數量</b></span>
-          <span><b>小計</b></span>		
+          <span className='product'><b>產品</b></span>
+          <span className='price'><b>價格</b></span>
+          <span className='number'><b>數量</b></span>
+          <span className='total'><b>小計</b></span>		
         </div>
         <Seperator/>
         <CartProduct/>

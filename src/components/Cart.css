@@ -2,12 +2,15 @@
     width: 80%;
     margin:0 auto;
 }
+.cart__basket{
+    width: 1100px;
+}
 .cart__summary{
     background-color: #f0f0f0;
     width:300px;
     float: right;
-    justify-content: center;
     margin-left: 30px;
+    
 }
 @media screen and (max-width: 992px){
     .cart__summary{
@@ -52,4 +55,16 @@
 }
 .summary__title{
     padding:5px 0;
+}
+.basket__header > .product{
+    margin-right: 51%;
+}
+.basket__header > .price{
+    margin-right: 11%;
+}
+.basket__header > .number{
+    margin-right: 7%;
+}
+.basket__header > .total{
+    
 }
