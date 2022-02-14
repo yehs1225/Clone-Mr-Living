@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import {useStateValue } from './StateProvider';
-import {getUserName,getAllProducts} from './utils';
+import {getUserName,getAllProducts,getUserCart,setUserCart} from './utils';
 import {auth} from "./firebase";
 import {onAuthStateChanged } from "firebase/auth";
 import Header from './components/Header';
@@ -12,10 +12,10 @@ import Copyright from './components/Copyright';
 import Cart from './components/Cart';
 import HandleAccount from './components/HandleAccount';
 function App() {
-  const [{},dispatch]=useStateValue();
+  const [{basket,product,user},dispatch]=useStateValue();
   useEffect(()=>{
-    getAllProducts().then((product)=>{
-      product.map(obj=>{
+    getAllProducts().then((event)=>{
+      event.map(obj=>{
         dispatch({
           type:"GET_PRODUCT",
           item:{
@@ -43,9 +43,20 @@ function App() {
           user:null,
           userName:null
         })
+        dispatch({
+          type:"CLEAR_ALL_BASKET",
+          basket:[]
+        })
       }
     });
-  },[])
+  },[]);
+  //update basket to user's firebase when it's changed
+  useEffect(()=>{
+    if(user){
+      console.log("basket>>>",basket);
+      setUserCart(user,basket);
+    }
+  },[basket])
   return (
     <Router>
       <div className='App'>  

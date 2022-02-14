@@ -1,7 +1,9 @@
 import React,{useState} from 'react';
 import './Login.css';
 import {auth}  from "./../firebase";
-import { signInWithEmailAndPassword} from "firebase/auth";
+import {useStateValue } from './../StateProvider';
+import { signInWithEmailAndPassword, setPersistence,browserSessionPersistence} from "firebase/auth";
+import {getUserCart} from './../utils';
 import {useNavigate} from 'react-router-dom';
 // import VisibilityIcon from '@material-ui/icons/Visibility';
 // import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
@@ -9,13 +11,40 @@ const LoginForm = () => {
   const [email,setEmail] = useState('');
   const [password,setPassword]=useState('');
   const navigate = useNavigate();
+  const [{product},dispatch]=useStateValue();
   const signIn = e=>{
+    setPersistence(auth, browserSessionPersistence)
     e.preventDefault();//not to refresh the page
     signInWithEmailAndPassword(auth,email,password)
     .then((userCredential)=>{
       //signed in 
       const user = userCredential.user;
       console.log(user);
+      getUserCart(user).then((event)=>{
+        event.map(arr=>{
+          arr.forEach(obj=>{
+            for (const [key, value] of Object.entries(obj)) 
+            { console.log("get item from product[]>> ",key)
+              product.forEach(item => {
+                if(item.id===key){ 
+                  dispatch({
+                    type:'ADD_TO_BASKET',
+                    item:
+                    {
+                      id:`${item.id}`,
+                      imageUrl:`${item.imageUrl}`,
+                      title:`${item.title}`,
+                      price:`${item.price}`,
+                      quantity:value
+                    }
+                  })
+                }
+              });
+            }
+          })
+
+        })
+      });
       navigate('/');
     })
     .catch(error=>alert(error.message))

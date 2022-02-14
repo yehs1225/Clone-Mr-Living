@@ -22,7 +22,7 @@ function Register() {
         FirstName:firstName,
         Phone:phone,
         Email:email,
-        Password:password
+        Password:password,
       });
       navigate('/');
     })
