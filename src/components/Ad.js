@@ -46,7 +46,7 @@ overflow: hidden; /* Hide scrollbars */
 }
 .subtitle{font-size:20px;}
 .text{font-size:18px;}
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     flex-direction:column;
     height:650px;
 }
@@ -57,7 +57,7 @@ z-index:-1;
 position: relative;
 background-image:${props =>`url("${props.image1}")`};
 background-size: cover;
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     background-size: cover;
     background-image:${props =>`url("${props.image2}")`};
 }
@@ -74,7 +74,7 @@ background-color:${({bgColor})=>bgColor};
     align-items: center;
     
 }
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     height:80%;
     padding-bottom:30px;
     // display:none;

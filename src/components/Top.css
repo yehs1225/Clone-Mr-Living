@@ -1,27 +1,24 @@
 .top{
-    overflow: hidden;
     display: flex;
-    padding-top:23px;
-    height:570px;
+    padding:23px 0;
+    /* height:570px; */
     
 }
-img{
+img{ 
     height: 520px;
 }
 .top__left{
     flex: 0.2;
-    width: 200px;
+    width: 100%;
 }
 .top__slide{
     flex: 0.8;
-    width:930px;
     height: 520px;
     padding-left: 30px;
 }
-.top__menu{
-     /* #f5f5f5; */
-    
+.top__menu{  
     margin-bottom: 15px;
+    width: 100%;
 }
 
 .menu{
@@ -30,7 +27,6 @@ img{
     border:1px solid #ddd;
     border-radius: 7px;
     overflow: hidden;
-    width: 290px;
 }
 .menu__title{
     font-weight: bold;
@@ -63,4 +59,15 @@ img{
 .hot-hit > li{
     border-bottom: 1px solid #ddd;
     background-color: black;
+}
+@media only screen and (max-width: 768px){
+    .top{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .top__slide{
+        padding-left:0;
+        padding-bottom: 20px;
+    }
+    
 }

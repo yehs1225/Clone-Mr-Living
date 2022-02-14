@@ -1,5 +1,9 @@
 import React from 'react';
 import './Footer.css'
+import EventNoteIcon from '@material-ui/icons/EventNote';
+import SearchIcon from '@material-ui/icons/Search';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import EmojiEventsIcon from '@material-ui/icons/EmojiEvents';
 function Footer() {
   return (
       <>
@@ -9,10 +13,10 @@ function Footer() {
                 <h2 className='footer__title'>追蹤我們</h2>
                 <ul className="footer__section">
                     {/* add icon and link */}
-                    <li><img src={require('./../images/icon_ig.jpg')} className='links footer__socialmedia'/>Instagram</li>
-                    <li><img src={require('./../images/icon_youtube.jpg')} className='links footer__socialmedia'/>Youtube</li>
-                    <li><img src={require('./../images/icon_line.jpg')} className='links footer__socialmedia'/>Line</li>
-                    <li><img src={require('./../images/icon_fb.jpg')} className='links footer__socialmedia'/>Facebook</li>
+                    <li><a href='https://www.instagram.com/'><img src={require('./../images/icon_ig.jpg')} className='links footer__socialmedia'/>Instagram</a></li>
+                    <li><a href='https://www.youtube.com/'><img src={require('./../images/icon_youtube.jpg')} className='links footer__socialmedia'/>Youtube</a></li>
+                    <li><a href='https://www.line.com/'><img src={require('./../images/icon_line.jpg')} className='links footer__socialmedia'/>Line</a></li>
+                    <li><a href='https://www.facebook.com/'><img src={require('./../images/icon_fb.jpg')} className='links footer__socialmedia'/>Facebook</a></li>
                 </ul>
             </div>
             <div className="footer__container">
@@ -24,8 +28,8 @@ function Footer() {
                     <div className="footer__subsection">
                         <h2 className='footer__title'>找客服</h2>
                             <div className='footer__customer-service'>
-                                <img src={require('./../images/icon_messenger.jpg')} className='footer__socialmedia'/>
-                                <img src={require('./../images/icon_line.jpg')} className='footer__socialmedia'/>
+                            <a href='https://www.facebook.com/'><img src={require('./../images/icon_messenger.jpg')} className='footer__socialmedia'/></a>
+                            <a href='https://www.line.com/'><img src={require('./../images/icon_line.jpg')} className='footer__socialmedia'/></a>
                             </div>
                     </div>
                     <div className="footer__subsection">
@@ -71,6 +75,14 @@ function Footer() {
                     <li>服務條款</li>
                     <li>常見問題</li>
                 </ul>
+            </div>
+            <div className="footer__mobile">
+                <div><a href='#'><EmojiEventsIcon fontSize='large'/></a></div>
+                <div><a href='#'><SearchIcon fontSize='large'/></a></div>
+                <div><a href='#'><EventNoteIcon fontSize='large'/></a></div>
+                <div><a href='#'><ShoppingCartIcon fontSize='large'/></a></div>
+                <div><img src={require('./../images/icon_ig.jpg')} className='links footer__socialmedia'/></div>
+                <div><img src={require('./../images/icon_line.jpg')} className='links footer__socialmedia'/></div>
             </div>
         </div>      
       </>

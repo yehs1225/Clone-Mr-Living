@@ -5,6 +5,7 @@
     width:1400px;
     flex:auto;
     overflow-x: hidden;
+    width: 80%;
 }
 
 .home__section > p{
