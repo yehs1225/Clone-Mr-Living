@@ -6,27 +6,21 @@ export const initialState={
 };
 
 const reducer =(state,action)=>{
-    console.log("0:",state,action);
     switch(action.type){
         case 'ADD_TO_BASKET':
             //find if the item is already in the cart
             const index1 = state.basket.findIndex(
                 (basketItem) => basketItem.id===action.item.id
             );
-            console.log("index1>>>",index1);
             //copy the array of items
             let newBasket1 = [...state.basket];
             //condition : whether the array is empty or not
             if(index1>=0){
-                console.log('already exist, Q = ',newBasket1[index1].quantity);
                 // already exist ,add quantity
                 newBasket1[index1].quantity+=1;
-                console.log('Q = ',newBasket1[index1].quantity);
             }else{//add a new item
-                console.log('not exist');
                 newBasket1 =[...state.basket,action.item]; 
             }
-            console.log(newBasket1);
             return {
                 ...state,
                 basket:newBasket1,
@@ -36,19 +30,13 @@ const reducer =(state,action)=>{
             const index2 = state.basket.findIndex(
                 (basketItem) => basketItem.id===action.item.id
             );
-            console.log("index2>>>",index2);
             //copy the array of items
             let newBasket2 = [...state.basket];
             //condition : whether the array is empty or not
             if(index2>=0){
-                console.log('already exist');
                 // already exist ,add quantity
                 newBasket2[index2].quantity-=1;
-            }//else{//add a new item
-                //console.log('not exist');
-                //newBasket2 =[...state.basket,action.item]; 
-            //}
-            console.log(newBasket2);
+            }
             return {
                 ...state,
                 basket:newBasket2,
@@ -68,7 +56,6 @@ const reducer =(state,action)=>{
             //condition : whether the array is empty or not
             if(index3>=0){
                 //remove the item
-                console.log("find index>>>",index3);
                 newBasket3.splice(index3,1);
             }else{
                 console.warn(

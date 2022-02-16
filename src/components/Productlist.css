@@ -1,6 +1,11 @@
 .productlist{
     display: flex;
-    width: 1280px;
+    /* width: 1280px; */
     margin: 0 auto;
-    /* justify-content: space-between; */
+    overflow: auto;
+    /* -ms-overflow-style: none;  IE and Edge */
+    /* scrollbar-width: none;  Firefox */
 }
+::-webkit-scrollbar {
+    /* display: none; */
+  }

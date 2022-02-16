@@ -1,6 +1,6 @@
 .product__image > img{
     height:300px;
-    width:240px;
+    width:280px;
 }
 .product__btn{
     
@@ -20,7 +20,7 @@
 }
 .product{
     height: 426px;
-    width: 240px;
+    width: 280px;
     color: #333;
     text-decoration: none;
     font-weight: 400;

@@ -1,5 +1,6 @@
 import React from 'react';
-import './Footer.css'
+import './Footer.css';
+import {Link } from "react-router-dom";
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
@@ -80,7 +81,7 @@ function Footer() {
                 <div><a href='#'><EmojiEventsIcon fontSize='large'/></a></div>
                 <div><a href='#'><SearchIcon fontSize='large'/></a></div>
                 <div><a href='#'><EventNoteIcon fontSize='large'/></a></div>
-                <div><a href='#'><ShoppingCartIcon fontSize='large'/></a></div>
+                <div><Link to='./Cart'><ShoppingCartIcon fontSize='large'/></Link></div>
                 <div><img src={require('./../images/icon_ig.jpg')} className='links footer__socialmedia'/></div>
                 <div><img src={require('./../images/icon_line.jpg')} className='links footer__socialmedia'/></div>
             </div>

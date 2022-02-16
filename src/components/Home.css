@@ -1,6 +1,5 @@
 .home__section{
     margin:0 auto;
-    /* margin-bottom: 40px; */
     max-width: 1400px;
     width:1400px;
     flex:auto;
@@ -12,4 +11,9 @@
     text-align: center;
     font-size: 24px;
     color:#333;
+}
+@media only screen and (max-width: 768px){
+    .home__section{
+        width: 90%;
+    }
 }

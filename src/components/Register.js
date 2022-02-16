@@ -39,7 +39,7 @@ function Register() {
               placeholder="  名" type="text" name="username" className="login-box" required
               value={firstName} onChange={e => setFirstName(e.target.value)}/>
             <input 
-              placeholder="  手機號碼，格式09XXXXXXXX" type="text" name="username" className="login-box" 
+              placeholder="  手機號碼" type="text" name="username" className="login-box" 
               value={phone} onChange={e => setPhone(e.target.value)}required/>
             <input 
               placeholder="  Email" type="text" name="username" className="login-box" required

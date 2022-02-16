@@ -53,7 +53,6 @@ function App() {
   //update basket to user's firebase when it's changed
   useEffect(()=>{
     if(user){
-      console.log("basket>>>",basket);
       setUserCart(user,basket);
     }
   },[basket])
@@ -61,10 +60,9 @@ function App() {
     <Router>
       <div className='App'>  
         <Routes>
-          {/* Homepage */}
           <Route path="/Cart" element={<><Header/><Navbar/><Cart/></>}/>
-          {/* Homepage */}
           <Route path="/HandleAccount" element={<HandleAccount/>}/>
+          {/* Homepage */}
           <Route path="/" element={<><Header/><Navbar/><Home/><Footer/><Copyright/></>}/>
         </Routes>
       </div>

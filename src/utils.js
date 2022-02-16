@@ -44,16 +44,13 @@ export const setUserCart = async(user,basket)=>{
   const newBasket=[];
   const newBasket1=[];
   basket.forEach(element=>{
-    console.log(element.id);
     let itemId=element.id;
     let itemQuantity = element.quantity;
     newBasket.push({[itemId]:itemQuantity});
   })
-  console.log(newBasket);
   newBasket.forEach(element=>{
     newBasket1.push(element);
   })
-  console.log(newBasket1);
   const userRef = doc(db,"SignedUpUserData",user.uid);
   await updateDoc(userRef,{
     "Cart":newBasket1

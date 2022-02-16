@@ -42,17 +42,18 @@ a{
 ul{
     padding: 0;
 }
-.footer__mobile {
-    display: none;
+.footer__mobile{
+    display: flex;
+    justify-content: space-between;
+    /* width: 10%; */
 }
 @media only screen and (max-width: 768px){
     .footer{
         flex-direction: column;
     };
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px){
     .footer__mobile {
-        display: flex;
-        justify-content: space-between;
+        display: none;
     }
-  }
+}

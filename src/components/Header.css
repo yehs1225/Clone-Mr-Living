@@ -1,17 +1,22 @@
 .header{
+    position: sticky;
+    z-index: 100;
+    width: auto;
+    top:0;   
+    margin: 0;
+}
+.header__main{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background-color:#f8f8f8;
     padding: 10px ;
-    position: sticky;
-    top:0;
-    z-index: 100;
-    height: 70px;
-    width: auto;
+    
+    
+    transition: margin-left .5s;
 }
 
-.header > img{
+.header__main > img{
     height: 30px;
 }
 .header__nav{
@@ -41,7 +46,6 @@
 }
 .header__link > div{
     display:flex;
-    /* padding:0 20px; */
     font-size: 16px;
 }
 .header__link > div > div{
@@ -75,11 +79,9 @@
     color: #585757;
 }
 .login-link:hover,.register-link:hover{
-    /* background-color:white;  */
     color:white;
 }
 .dropdown{
-    /* width: px; */
     padding: 0;
     z-index: 10;
 }
@@ -97,3 +99,67 @@
 .flex{
     display: flex;
 }
+.mySidenav{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    transition:margin-left 0.5s;
+}
+ .sidenav {
+    height: 100%;
+    width: 90%;
+    position: fixed;
+    z-index: 100;
+    top: 30;
+    left: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+  }
+
+  /* .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  } */
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 50px;
+    display: block;
+  } 
+  @media only screen and (max-width: 768px){  
+    .header__search{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .header__searchInput,.header__link{
+        display: none;
+    };
+}
+@media only screen and (min-width: 768px){
+    .menuIcon {
+        display: none;
+    }
+}
+.sidenav-menu,.sidenav-account{
+    display: inline-block;
+    /* background-color: ; */
+    color: #1e7bbb;
+    padding: 30px 60px;
+}
+.sidenav-account-list > div{
+    font:'inherit';
+    font-weight: bolder;
+    color: #5c6171;
+    padding-left: 20px;
+}
+.sidenav-account-list > div >a{
+    font:'inherit';
+    font-weight: bolder;
+    color: #5c6171;
+}
+

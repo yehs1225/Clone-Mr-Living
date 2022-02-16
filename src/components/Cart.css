@@ -3,7 +3,8 @@
     margin:0 auto;
 }
 .cart__basket{
-    width: 1100px;
+    width: 100%;
+    padding-top: 30px;
 }
 .cart__summary{
     background-color: #f0f0f0;
@@ -12,10 +13,16 @@
     margin-left: 30px;
     
 }
-@media screen and (max-width: 992px){
+.backLink>a{
+    color: black;
+}
+@media only screen and (max-width: 768px){
     .cart__summary{
         float:none;
         width:auto;
+    }
+    .cart{
+        width: 95%;
     }
 }
 .font24{
@@ -64,7 +71,4 @@
 }
 .basket__header > .number{
     margin-right: 7%;
-}
-.basket__header > .total{
-    
 }

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react'
+import ScrollContainer from 'react-indiana-drag-scroll'
 import {useStateValue} from './../StateProvider'
 import Product from './Product';
 import './Productlist.css';
 function Productlist() {
     const [{product}]=useStateValue();
   return (
-    <div className="productlist">
+    <ScrollContainer className="productlist">
         {product.map((item,index)=>(
             <Product 
             key={index}
@@ -15,7 +16,7 @@ function Productlist() {
             price={item.price}
             />
         ))}
-    </div>
+    </ScrollContainer>
   )
 }
 export default Productlist

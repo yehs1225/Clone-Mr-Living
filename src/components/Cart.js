@@ -110,7 +110,7 @@ function Cart() {
         (
           <>
             <div>你的購物車中沒有任何物品</div>    
-            <div>Click <Link to="/">here</Link> to continue shopping.</div> 
+            <div className='backLink'><Link to="/" style={{ color: 'inherit', textDecoration: 'none'}}>Click  here to continue shopping.</Link></div> 
           </>
         )
         }

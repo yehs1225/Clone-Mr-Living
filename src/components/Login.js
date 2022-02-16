@@ -19,12 +19,11 @@ const LoginForm = () => {
     .then((userCredential)=>{
       //signed in 
       const user = userCredential.user;
-      console.log(user);
       getUserCart(user).then((event)=>{
         event.map(arr=>{
           arr.forEach(obj=>{
             for (const [key, value] of Object.entries(obj)) 
-            { console.log("get item from product[]>> ",key)
+            { 
               product.forEach(item => {
                 if(item.id===key){ 
                   dispatch({
